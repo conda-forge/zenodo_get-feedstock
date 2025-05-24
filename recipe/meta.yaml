@@ -1,5 +1,5 @@
 {% set name = "zenodo_get" %}
-{% set version = "1.6.1" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zenodo_get-{{ version }}.tar.gz
-  sha256: b0ac60af981682e711f42c7ba1483f49c23869d9fc169f6addb63f8a95847a72
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zenodo_get-{{ version }}.tar.gz
+  sha256: 9e17e35b0655f4a1ccbb1c3c9c4d0a7a79a5bdb0ff7d1ee28d5581f69cdc6312
 
 build:
   number: 0
