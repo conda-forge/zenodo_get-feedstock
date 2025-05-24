@@ -1,5 +1,6 @@
 {% set name = "zenodo_get" %}
 {% set version = "2.0.0" %}
+{% set python_min = "3.6" %}
 
 
 package:
@@ -14,18 +15,21 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - zenodo_get = zenodo_get.zget:zenodo_get
-  script: {{ PYTHON }} -m pip install . -vv
+    - zenodo_get = zenodo_get.zget:cli
+  script: {{ PYTHON }} -m uv pip install . -vv
 
 requirements:
   host:
+    - uv
     - pip
-    - python >=3.6
+    - setuptools
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - python-wget
     - humanize
+    - click
 
 test:
   imports:
@@ -35,9 +39,10 @@ test:
     - zenodo_get --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
-  home: https://gitlab.com/dvolgyes/zenodo_get
+  home: https://github.com/dvolgyes/zenodo_get
   summary: Zenodo_get - a downloader for Zenodo records
   license: AGPL-3.0-only
   license_file: LICENSE.txt
