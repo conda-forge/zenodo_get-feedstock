@@ -27,7 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-zenodo_get-green.svg)](https://anaconda.org/conda-forge/zenodo_get) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/zenodo_get.svg)](https://anaconda.org/conda-forge/zenodo_get) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/zenodo_get.svg)](https://anaconda.org/conda-forge/zenodo_get) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/zenodo_get.svg)](https://anaconda.org/conda-forge/zenodo_get) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-zenodo__get-green.svg)](https://anaconda.org/conda-forge/zenodo_get) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/zenodo_get.svg)](https://anaconda.org/conda-forge/zenodo_get) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/zenodo_get.svg)](https://anaconda.org/conda-forge/zenodo_get) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/zenodo_get.svg)](https://anaconda.org/conda-forge/zenodo_get) |
 
 Installing zenodo_get
 =====================
