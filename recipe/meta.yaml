@@ -1,5 +1,5 @@
 {% set name = "zenodo_get" %}
-{% set version = "1.6.1" %}
+{% set version = "3.1.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zenodo_get-{{ version }}.tar.gz
-  sha256: b0ac60af981682e711f42c7ba1483f49c23869d9fc169f6addb63f8a95847a72
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/zenodo_get-{{ version }}.tar.gz
+  sha256: 73c945198853aa362cf8ce6a71b9f1112671ce995622a1969978ffdf12ecd10f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - zenodo_get = zenodo_get.zget:zenodo_get
