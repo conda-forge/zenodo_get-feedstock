@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: "3.1.0"
+
+package:
+  name: zenodo_get
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/z/zenodo_get/zenodo_get-${{ version }}.tar.gz
+  sha256: 73c945198853aa362cf8ce6a71b9f1112671ce995622a1969978ffdf12ecd10f
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - zenodo_get = zenodo_get.zget:cli
+
+requirements:
+  host:
+    - pip
+    - uv-build 0.12.*
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - click
+    - httpx2 >=2.12
+    - humanize
+    - loguru
+    - tqdm
+
+tests:
+  - python:
+      imports:
+        - zenodo_get
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - script:
+      - zenodo_get --help
+
+about:
+  summary: Zenodo_get - a downloader for Zenodo records
+  license: AGPL-3.0-only
+  license_file: LICENSE.txt
+  homepage: https://github.com/dvolgyes/zenodo_get
+
+extra:
+  recipe-maintainers:
+    - casperdcl
+    - ickc
